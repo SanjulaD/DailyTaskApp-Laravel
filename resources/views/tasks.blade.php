@@ -10,11 +10,21 @@
 <body>
 
     <div class="container">
-        <div class="text-center">
+        <div class="text-center"><br>
            <h1>Daily Tasks</h1>
            </br>
             <div class="row">
                 <div class="col-md-12">
+
+                @foreach( $errors->all() as $error )
+
+                    <div class="alert alert-danger" role="alert">
+                        {{ $error }}
+                    </div>
+
+                @endforeach
+
+
                     <form action="/saveTask" method="post">
                         {{csrf_field()}}
 
@@ -30,12 +40,14 @@
                         <th>Task</th>
                         <th>Completed</th>
 
+                        @foreach($tasks as $task)
                         <tr>
-                            <td>1</td>
-                            <td>I have to go to school</td>
-                            <td>Not yet</td>
+                            <td>{{ $task->id }}</td>
+                            <td>{{ $task->task }}</td>
+                            <td>{{ $task->iscompleted }}</td>
                         </tr>
-                        
+                        @endforeach
+
                     </table>
                 </div>
             </div>

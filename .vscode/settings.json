@@ -3,6 +3,7 @@
         "Laravel",
         "csrf",
         "dailytaskapp",
+        "endforeach",
         "iscompleted"
     ]
 }
