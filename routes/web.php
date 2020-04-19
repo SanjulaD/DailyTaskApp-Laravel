@@ -12,3 +12,9 @@ Route::get('/tasks', function () {
 });
 
 Route::post('/saveTask', 'taskController@store');
+
+Route::get('/markAsCompleted/{id}' , 'taskController@UpdateTaskAsCompleted');
+
+Route::get('/markAsNotCompleted/{id}' , 'taskController@UpdateTaskAsNotCompleted');
+
+Route::get('/deleteTask/{id}' , 'taskController@DeleteTask');
