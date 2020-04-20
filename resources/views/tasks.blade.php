@@ -61,6 +61,7 @@
 
                                 <a href="/deleteTask/{{ $task->id }}" class="btn btn-info">Delete</a>
 
+                                <a href="/updateTask/{{ $task->id }}" class="btn btn-info">Update</a>
                             </td>
                         </tr>
                         @endforeach

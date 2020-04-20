@@ -4,6 +4,8 @@
         "csrf",
         "dailytaskapp",
         "endforeach",
-        "iscompleted"
+        "iscompleted",
+        "taskdata",
+        "updatetask"
     ]
 }
