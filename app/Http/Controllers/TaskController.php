@@ -59,4 +59,17 @@ class TaskController extends Controller
         return view('updatetask')->with('taskdata' , $task);
 
     }
-}
+    
+    public function updateTask(Request $request) {
+
+        $id = $request->id;
+        $task = $request->task;
+        $data = Task::find($id);
+        $data->task = $task;
+        $data->save();
+
+        $datas = Task::all();
+        return view('tasks')->with('tasks',$datas);
+
+    }
+ }

@@ -10,10 +10,11 @@
 </head>
 <body>
     <div class="container text-center">
-        <form action="#" method="post">
+        <form action="/updateTaskText" method="post">
+        {{csrf_field()}}
                 <br>
                 <input class="form-control" type="text" name="task" value="{{$taskdata->task}}">
-                <input class="form-control" type="hidden" name="task" value="{{$taskdata->id}}">
+                <input type="hidden" name="id" value="{{$taskdata->id}}">
                 <br>
                 <input type="submit" value="Submit" class="btn btn-danger">
                 <input type="reset" value="Clear" class="btn btn-success">    
